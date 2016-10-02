@@ -24,6 +24,8 @@ public:
 	// Called every frame
 	virtual void TickComponent( float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction ) override;
 
+	float GetTotalMassOfActorsOnPlate();
+
 	
 private:
 	UPROPERTY(EditAnywhere)
@@ -36,6 +38,5 @@ private:
 	float DoorCloseDelay = 1.f;
 	float LastDoorOpenTime;
 
-	AActor* ActorThatOpens; // Pawn inherits from Actor
 	AActor* Owner; // The owning Door
 };
